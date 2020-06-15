@@ -188,6 +188,10 @@ metadata:
     component: core
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: prometheus
+      component: core
   template:
     metadata:
       name: prometheus-main
@@ -234,6 +238,9 @@ metadata:
   namespace: opsani-monitoring
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: kube-state-metrics
   template:
     metadata:
       labels:

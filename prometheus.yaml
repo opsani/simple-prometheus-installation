@@ -178,7 +178,7 @@ metadata:
   name: prometheus-core
   namespace: opsani-monitoring
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: prometheus-core
@@ -231,7 +231,7 @@ spec:
         configMap:
           name: prometheus-rules
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: kube-state-metrics
